@@ -8,6 +8,7 @@ export class NavigationTabsComponent extends SourceNavigationTabsComponent {
 
     renderMap = {
         home: this.renderHomeButton.bind(this),
+        // menu: this.renderMenuButton.bind(this),
         account: this.renderAccountButton.bind(this),
         minicart: this.renderMinicartButton.bind(this),
     };
