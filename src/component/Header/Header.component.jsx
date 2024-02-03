@@ -5,16 +5,19 @@ import { HeaderComponent as SourceHeaderComponent } from 'SourceComponent/Header
 /** @namespace myFirstApp/Component/Header/Component */
 export class HeaderComponent extends SourceHeaderComponent {
     renderLogo(isVisible = false) {
-        const { isLoading, device } = this.props;
+        const { isLoading, device, onMenuButtonClick } = this.props;
 
         if (isLoading) {
             return null;
         }
-        console.log(device.isMobile);
 
         return (
             <>
+            <button
+              onClick={ onMenuButtonClick }
+            >
              { device.isMobile && <MenuIcon /> }
+            </button>
              <Link
                to="/"
                aria-label="Go to homepage by clicking on ScandiPWA logo"
