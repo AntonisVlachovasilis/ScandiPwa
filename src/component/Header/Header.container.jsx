@@ -18,7 +18,9 @@ export const mapStateToProps = (state) => ({
 
 /** @namespace myFirstApp/Component/Header/Container/mapDispatchToProps */
 export const mapDispatchToProps = (dispatch) => ({
+
     ...sourceMapDispatchToProps(dispatch),
+
     // TODO extend mapDispatchToProps
 });
 
@@ -27,7 +29,9 @@ export class HeaderContainer extends SourceHeaderContainer {
     // TODO implement logic
     onMenuButtonClick() {
         // eslint-disable-next-line no-console
-        console.log('hello');
+        const { showOverlay } = this.props;
+
+        showOverlay('TEST');
     }
 
     containerFunctions = {
